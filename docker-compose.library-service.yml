@@ -1,0 +1,18 @@
+services:
+  library-service:
+    build:
+      context: .
+      dockerfile: library-service/Dockerfile
+    ports:
+      - "8081:8081"
+    environment:
+      DB_HOST: postgres
+      DB_USER: postgres
+      DB_PASSWORD: postgres
+      KAFKA_BOOTSTRAP: kafka:9092
+      JWT_SECRET: change-me-in-production-min-32-chars-long
+
+networks:
+  default:
+    name: spry-network
+    external: true

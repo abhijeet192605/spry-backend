@@ -1,0 +1,3 @@
+CREATE DATABASE library_db;
+CREATE DATABASE order_db;
+CREATE DATABASE ticket_db;

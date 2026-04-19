@@ -1,0 +1,16 @@
+databaseChangeLog:
+  - include:
+      file: db/changelog/migrations/V001__create_users.sql
+      relativeToChangelogFile: false
+  - include:
+      file: db/changelog/migrations/V002__create_books.sql
+      relativeToChangelogFile: false
+  - include:
+      file: db/changelog/migrations/V003__create_wishlist.sql
+      relativeToChangelogFile: false
+  - include:
+      file: db/changelog/migrations/V004__create_notification_log.sql
+      relativeToChangelogFile: false
+  - include:
+      file: db/changelog/migrations/V005__create_outbox_events.sql
+      relativeToChangelogFile: false

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+                   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                   xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+                   http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.20.xsd">
+
+    <changeSet id="V005__load_sample_customers" author="spry">
+        <loadData file="db/changelog/migrations/V005__sample_customers.csv"
+                  tableName="customers"
+                  separator=","
+                  usePreparedStatements="true">
+            <column name="id"      type="UUID"/>
+            <column name="name"    type="STRING"/>
+            <column name="email"   type="STRING"/>
+            <column name="address" type="STRING"/>
+        </loadData>
+    </changeSet>
+
+</databaseChangeLog>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+                   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                   xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+                   http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.24.xsd">
+
+    <include file="migrations/V001__create_users.sql" relativeToChangelogFile="true"/>
+    <include file="migrations/V002__create_events.sql" relativeToChangelogFile="true"/>
+    <include file="migrations/V003__create_seat_holds.sql" relativeToChangelogFile="true"/>
+    <include file="migrations/V004__create_bookings.sql" relativeToChangelogFile="true"/>
+    <include file="migrations/V005__create_shedlock.sql" relativeToChangelogFile="true"/>
+
+</databaseChangeLog>

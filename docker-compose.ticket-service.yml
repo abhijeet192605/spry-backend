@@ -1,0 +1,21 @@
+services:
+  ticket-service:
+    build:
+      context: .
+      dockerfile: ticket-service/Dockerfile
+    ports:
+      - "8083:8083"
+    environment:
+      DB_HOST: postgres
+      DB_NAME: ticket_db
+      DB_USER: postgres
+      DB_PASSWORD: postgres
+      KAFKA_BOOTSTRAP: kafka:9092
+      JWT_SECRET: change-me-in-production-min-32-chars-long
+      HOLD_TTL_MINUTES: 5
+      MAX_SEATS_PER_HOLD: 10
+
+networks:
+  default:
+    name: spry-network
+    external: true
